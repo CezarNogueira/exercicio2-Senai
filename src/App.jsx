@@ -1,11 +1,11 @@
 import './App.css';
 import Header from './components/header/Header';
-import Listas from './components/page/Listas';
+import Listas from './components/page';
 
 function App() {
 
   return (
-    <div className='container_app'>
+    <div className='container'>
         <header><Header/></header>
         <main><Listas/></main>
     </div>
