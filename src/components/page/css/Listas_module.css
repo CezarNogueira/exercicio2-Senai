@@ -30,6 +30,7 @@
 .input_wrapper input {
     width: 20vw;
     height: 4vh;
+    padding-left: 0.5rem;
 
     font-size: 1.15rem;
     border-radius: 8px;
