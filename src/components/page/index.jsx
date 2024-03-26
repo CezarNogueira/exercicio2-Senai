@@ -4,14 +4,20 @@ import './css/Listas_module.css';
 
 function Listas () {
     const [text, setText] = useState('');
+    const [date, setDate] = useState('');
     const [task, setTask] = useState([]);
-    const clearTask = useState();
+
+    const nowDate = new Date().toLocaleDateString();
 
     const createTask = () => {
-        if(text !== '') {
-            setTask ([...task, { text: text}]);
+        if (text !== '') {
+            setTask ([...task, { text: text, date: nowDate}]);
             setText ('');
         };
+    };
+
+    const clearTask = () => {
+        setTask ([]);
     };
 
     return (
@@ -22,8 +28,11 @@ function Listas () {
 
                         <div className="box_task">
                             {task.map((task, index) => (
-                            <li key={index}>{task.text}</li>
-                            ))};
+                            <div className="task">
+                                <div className="task_text">{task.text}</div>
+                                <div className="task_date">{task.date}</div>
+                            </div>
+                            ))}
                         </div>
                         
                     </div>

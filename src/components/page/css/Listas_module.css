@@ -15,9 +15,8 @@
     width: 50vw;
     height: 30vh;
     max-width: 35rem;
-    height: 15rem;
-    
-    border-radius: 32px;
+    max-height: 15rem;
+    border-radius: 16px;
 
     background-color: aliceblue;
 
@@ -31,12 +30,17 @@
 .input_wrapper input {
     width: 20vw;
     height: 4vh;
+
     font-size: 1.15rem;
+    border-radius: 8px;
+    border: none;
 }
 
 .flex_wrapper_task {
     width: 50vw;
     height: 50vh;
+    border-radius: 16px;
+
     background-color: #acacac;
 
     display: flex;
@@ -47,16 +51,40 @@
 }
 
 .box_task {
-    width: 30vw;
-    height: 30vh;
-
-    border-radius: 32px;
+    width: 45vw;
+    height: 45vh;
+    border-radius: 16px;
+    gap: 1rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+    background-color: #202020;
+}
+
+.task {
+    width: 20vw;
+    height: 20vh;
+    max-height: 72px;
+    border-radius: 8px;
+
     background-color: #f7f7f7;
     color: #202020;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.task_text {
+    text-align: left;
+    margin-left: 0.5rem;
+}
+
+.task_date {
+    text-align: right;
+    margin-right: 0.5rem;
 }
