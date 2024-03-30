@@ -4,8 +4,8 @@ import './css/Listas_module.css';
 
 function Listas () {
     const [text, setText] = useState('');
-    const [date, setDate] = useState('');
     const [task, setTask] = useState([]);
+    const [buttonTask, setButtonTask] = useState(0); // não finalizado
 
     const nowDate = new Date().toLocaleDateString();
 
@@ -20,6 +20,12 @@ function Listas () {
         setTask ([]);
     };
 
+    const buttonTaskOn = () => {
+        if (buttonTask === 0) {
+            
+        };
+    }; // não Finalizado
+
     return (
             <div className="flex_wrapper_listas">
 
@@ -31,6 +37,7 @@ function Listas () {
                             <div className="task">
                                 <div className="task_text">{task.text}</div>
                                 <div className="task_date">{task.date}</div>
+                                <div className="task_button">{task.buttonTask}</div>
                             </div>
                             ))}
                         </div>
@@ -39,7 +46,7 @@ function Listas () {
                 </ol>
                 
                 <div className="input_wrapper">
-                    <input type="text" value={text} onChange={(e) => setText(e.target.value)}/>
+                    <input placeholder="Ex: Receber Encomenda" type="text" value={text} onChange={(e) => setText(e.target.value)}/>
 
                     <button onClick={createTask}>ADD TASK</button>
                     <button onClick={clearTask}>CLEAR</button>
